@@ -1,0 +1,7 @@
+version: '2'
+services:
+  asteriks:
+    build: docker-asterisk/.
+    ports:
+      - 4573:4573
+
