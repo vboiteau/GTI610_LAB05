@@ -1,7 +1,11 @@
 version: '2'
 services:
-  asteriks:
-    build: docker-asterisk/.
+  asterisk:
+    image: andrius/alpine-asterisk
     ports:
-      - 4573:4573
-
+      - 5060:5060
+      - 5060/udp:5060/udp
+      - 5061:5061
+      - 5061/udp:5061/udp
+    volumes:
+      - ./sip.conf:/etc/asterisk/sip.conf
