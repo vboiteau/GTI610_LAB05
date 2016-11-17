@@ -9,3 +9,6 @@ services:
       - 5061/udp:5061/udp
     volumes:
       - ./sip.conf:/etc/asterisk/sip.conf
+      - ./extensions.conf:/etc/asterisk/extensions.conf
+      - ./iax.conf:/etc/asterisk/iax.conf
+      - ./voicemail.conf:/etc/asterisk/voicemail.conf
