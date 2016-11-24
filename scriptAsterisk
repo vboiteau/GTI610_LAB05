@@ -1,0 +1,11 @@
+
+wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-11-current.tar.gz && tar zxvf asterisk-11-current.tar.gz && rm asterisk-11-current.tar.gz
+
+cd asterisk-11.25.0/
+
+./configure --prefix=$HOME/asterisk-bin --sysconfdir=$HOME/asterisk-bin/etc --localstatedir=$HOME/asterisk-bin/var && make -j4 && make install && make samples && make progdocs
+
+cd ..
+
+./asterisk-bin/sbin/asterisk -cvvv
+
